@@ -30,7 +30,8 @@ const projects = [
     link: "hybrhind-signage.com",
     description:
       "A real-time signage display system for forex rates, optimized for various screen sizes and designed with stability in mind.",
-    image: "https://images.unsplash.com/photo-1557858310-9052820906f7?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image:
+      "https://images.unsplash.com/photo-1557858310-9052820906f7?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     tags: ["React", "Auto Refresh", "Responsive"],
   },
   {
@@ -48,7 +49,8 @@ const projects = [
     link: "carrenthub.in",
     description:
       "A complete car rental web app allowing customers to browse, book, and manage rentals with owner-side dashboard and live status tracking.",
-    image: "https://images.unsplash.com/photo-1468818438311-4bab781ab9b8?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // cars/rental feel
+    image:
+      "https://images.unsplash.com/photo-1468818438311-4bab781ab9b8?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // cars/rental feel
     tags: ["React", "Tailwind CSS", "Express"],
   },
 ];
@@ -63,23 +65,28 @@ const Projects = (props: Props) => {
           was a learning curve.
         </p>
       </div>
-      <div className="pt-6 px-4 flex flex-col gap-2 ">
+      <div className="pt-6 px-4 flex flex-col gap-4 ">
         {projects.map((item, index) => (
           <Card
-            className="bg-[#121212] border-muted/25 border-[0.1px] rounded-xl py-4"
+            className="bg-[#121212] border-muted/25 border-[0.1px] rounded-3xl py-4"
             key={index}
           >
             <CardContent className="px-4">
-              <img className="rounded-2xl w-[324px] h-[216px]" src={item.image} />
-              <div className="flex justify-between py-4">
-                <h1 className="text-white flex items-center font-extrabold text-xl">
+              <img
+                className="rounded-2xl w-[324px] h-[216px]"
+                src={item.image}
+              />
+              <div className="flex justify-between py-4 items-center">
+                <h1 className="text-white flex items-center font-extrabold text-xl ">
                   {item.title}
                 </h1>
                 <Button
                   variant={"link"}
                   className="bg-slate-600/30 text-muted/50 font-bold"
                 >
-                  <Link2 /> {item.link}
+                  <Link2 />
+                  {item.title.length > 20 || item.link.length > 18 ? "Link" : item.link}
+                  
                 </Button>
               </div>
               <Separator
@@ -87,7 +94,7 @@ const Projects = (props: Props) => {
                 className="!h-[0.5px]  bg-muted/10"
               />
               <div className="flex font-bold text-sm items-center text-gray-200/50 gap-2 py-2">
-                {item.tags.map((tag,tagIndex) => (
+                {item.tags.map((tag, tagIndex) => (
                   <>
                     <p>{tag}</p>
                     {tagIndex !== item.tags.length - 1 && <Dot />}{" "}
@@ -106,7 +113,9 @@ const Projects = (props: Props) => {
             </CardContent>
           </Card>
         ))}
-        <Button className="text-muted/60">More on Github.com <Github/></Button>
+        <Button className="text-muted/60 text-md py-5">
+          More on Github.com <Github />
+        </Button>
       </div>
     </div>
   );

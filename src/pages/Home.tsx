@@ -1,5 +1,6 @@
 import About from '@/components/About'
 import Experience from '@/components/Experience'
+import Footer from '@/components/Footer'
 import Hero from '@/components/Hero'
 import Navbar from '@/components/Navbar'
 import Projects from '@/components/Projects'
@@ -14,9 +15,10 @@ const Home = (props: Props) => {
    <Navbar/>
    <Hero/>
    <Experience/>
-   <Stack/>
    <Projects/>
+   <Stack/>
    <About/>
+   <Footer/>
    </div>
   )
 }

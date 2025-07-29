@@ -37,7 +37,7 @@ const experience = [
 
 const Experience = (props: Props) => {
   return (
-    <div className="py-10 bg-black ">
+    <div className="py-10 bg-black md:w-2/3 md:mx-auto md:border-x-[0.7px]  md:px-8">
       <div className="flex flex-col items-left text-white border-b border-muted/20 border-dashed pb-4 px-6 gap-1">
         <p className="text-4xl font-bold">Experience</p>
         <p className="text-sm text-left text-gray-400 font-normal">

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "@/assets/react.svg";
+import logo from "@/assets/logo.png";
 import { Dot, Mail, PersonStanding, ToolCase } from "lucide-react";
 import { Button } from "./ui/button";
 
@@ -8,6 +8,7 @@ const NavbarTab = {
   Hero: "hero",
   Experience: "experience",
   Projects: "projects",
+  Skill:"skill",
   About: "about",
 } as const;
 
@@ -17,28 +18,16 @@ const Navbar = (props: Props) => {
   console.log(tab);
   return (
     <div className="fixed flex w-screen justify-center px-4 py-4 z-50 opacity-90 ">
-      <div className="bg-black backdrop-filter backdrop-blur-2xl bg-opacity-90 flex gap-2 h-14 border px-2 items-center border-muted/50 rounded-full text-white">
+      <div className="bg-black backdrop-filter backdrop-blur-2xl bg-opacity-90 flex gap-2 md:gap-4Z h-14 border px-2 items-center border-muted/50 rounded-full text-white">
         <button
           onClick={() => setTab(NavbarTab.Hero)}
-          className={`cursor-pointer rounded-full bg-gray-500 w-12 h-10 flex justify-center items-center ${
+          className={`cursor-pointer rounded-full bg-gray-500 w-12 h-12 flex justify-center items-center ${
             tab === NavbarTab.Hero ? " border-2 border-muted/80" : ""
           }`}
         >
-          <PersonStanding />
+          <img src={logo} className="rounded-full" />
         </button>
-        <button
-          onClick={() => setTab(NavbarTab.Projects)}
-          className={`cursor-pointer ${
-            tab === NavbarTab.Projects
-              ? " bg-gray-500/20 border-t-[0.9px] rounded-3xl py-1 px-3 "
-              : ""
-          }`}
-        >
-          Project
-        </button>
-        <div className="opacity-50">
-          <Dot className="w-4 " />
-        </div>
+        
         <button
           onClick={() => setTab(NavbarTab.Experience)}
           className={`cursor-pointer ${
@@ -49,6 +38,37 @@ const Navbar = (props: Props) => {
         >
           Experience
         </button>
+        <div className="opacity-50">
+          <Dot className="w-4 " />
+        </div>
+        <button
+          onClick={() => setTab(NavbarTab.Projects)}
+          className={`cursor-pointer ${
+            tab === NavbarTab.Projects
+              ? " bg-gray-500/20 border-t-[0.9px] rounded-3xl py-1 px-3 "
+              : ""
+          }`}
+        >
+          Project
+        </button>
+        {/* For large screen */}
+        
+        <div className="opacity-50 hidden md:flex">
+          <Dot className="w-4 " />
+        </div>
+        <button
+          onClick={() => setTab(NavbarTab.Skill)}
+          className={`cursor-pointer hidden md:flex ${
+            tab === NavbarTab.Skill
+              ? " bg-gray-500/20 border-t-[0.9px] rounded-3xl py-1 px-3 "
+              : ""
+          }`}
+        >
+          Skill
+        </button>
+
+
+        
         <div className="opacity-50">
           <Dot className="w-4 " />
         </div>
