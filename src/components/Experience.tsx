@@ -1,56 +1,116 @@
-import { ArrowRight, BriefcaseBusiness } from "lucide-react";
+import { ArrowRight, ArrowUpRight, BriefcaseBusiness } from "lucide-react";
 import React from "react";
 import { Card, CardContent } from "./ui/card";
 import { Separator } from "./ui/separator";
+import { motion } from "motion/react";
+import alhind from '@/assets/experinence/alhind.png'
+import mulearn from '@/assets/experinence/mulearn.png'
+import freelance from '@/assets/experinence/freelance.png'
 
 type Props = {};
 
 const experience = [
   {
-    icon: "https://cdn-icons-png.flaticon.com/512/5969/5969020.png", // tech company-style icon
+    icon: alhind, // tech company-style icon
     title: "Alhind Tours & Travels",
-    role: "Frontend Developer Intern",
-    from: "July 2023",
-    to: "June 2024",
+    role: "Junior Frontend Developer",
+    from: "January 2024",
+    to: "Present",
     description:
-      "Worked on internal dashboards and customer-facing web modules using React.js, integrated APIs, and optimized components for performance and responsiveness.",
+      "Built clean and responsive UIs for Hybrhind Forex ERP using React.js and ShadCN, powering daily use by 200+ traders. Hooked up 15+ APIs with smooth data handling. Also crafted a digital signage system and admin panel that replaced 50+ physical boards across 10 locations. Optimized components for performance and responsiveness, cutting page load times by 40%.",
   },
   {
-    icon: "https://cdn-icons-png.flaticon.com/512/5968/5968520.png", // another modern tech-looking icon
+    icon: mulearn, // another modern tech-looking icon
     title: "GTech µLearn",
-    role: "Frontend Developer",
-    from: "2022",
-    to: "2023",
+    role: "Reactjs Intern",
+    from: "February 2023",
+    to: "July 2023",
     description:
-      "Built educational microtools, contributed to open-source frontend components, and collaborated in a community-driven agile setup.",
+      "Delivered 5+ new features and integrated multi-language support using React i18n, expanding accessibility to 5,000+ international users. Alongside performance improvements of 30% through smart component restructuring and lazy loading, I actively fixed critical bugs to ensure a smooth user experience.",
   },
   {
-    icon: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png", // generic user/freelancer-style icon
-    title: "Freelance Projects",
-    role: "Full Stack Developer",
-    from: "2021",
-    to: "2022",
+    icon: freelance, // generic user/freelancer-style icon
+    title: "Freelance",
+    role: "Frontend Developer",
+    from: "2023",
+    to: "2024",
     description:
-      "Delivered end-to-end web solutions for local businesses using React.js, Node.js, and Firebase. Focused on clean UI and lightweight, maintainable codebases.",
+      "Led frontend development for 5+ projects, including Fitness Tea Ecommerce and KEL Electrical ERP, using React, Tailwind CSS, and Material UI. Collaborated closely with cross-functional teams to ensure seamless integration and user experience. Delivered key projects 20% ahead of schedule through efficient planning, component reuse, and clear communication.",
   },
 ];
-
+const MotionCard = motion(Card);
+const MotionCardContent = motion(CardContent);
 const Experience = (props: Props) => {
   return (
-    <div className="py-10 bg-black md:w-2/3 md:mx-auto md:px-24 md:py-12 md:pt-24">
+    <div
+      className="py-10 bg-black md:w-2/3 md:mx-auto md:px-24 md:py-12 md:pt-24"
+      id="experience"
+    >
       <div className="flex flex-col items-left text-white border-b border-muted/20 border-dashed pb-4 px-6 gap-0 md:gap-2">
-        <p className="text-4xl font-bold font-[Sansation]">Experience</p>
-        <p className="text-sm md:text-xl text-left text-gray-400 font-normal font-[Sansation]">
+        <motion.p
+          className="text-4xl font-bold font-[Sansation]"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.4,
+            ease: "circInOut",
+            repeat: 0,
+            delay: 0.1,
+            type: "tween",
+            stiffness: 60,
+          }}
+          viewport={{ once: true, amount: 0.6 }}
+        >
+          Experience
+        </motion.p>
+        <motion.p
+          className="text-sm md:text-xl text-left text-gray-400 font-normal font-[Sansation]"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.4,
+            ease: "circInOut",
+            repeat: 0,
+            type: "tween",
+            stiffness: 40,
+            delay: 0.4,
+          }}
+          viewport={{ once: true, amount: 0.6 }}
+        >
           From freelance to full time role, every stop made me a better learner.
-        </p>
+        </motion.p>
       </div>
       <div className="pt-6 px-4 flex flex-col gap-4 ">
         {experience.map((items, index) => (
-          <Card
+          <MotionCard
             key={index}
-            className="bg-[#121212] border-muted/25 border-[0.1px] rounded-xl py-0 backdrop-blur-3xl opacity-80"
+            className="bg-[#121212] border-muted/25 border-[0.1px] rounded-xl py-0 backdrop-blur-3xl opacity-80 cursor-pointer hover:outline-2 hover:border-white/60 hover:rounded-xl"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.2,
+              ease: "easeIn",
+              repeat: 0,
+              delay: 0.4,
+              type: "tween",
+              stiffness: 60,
+            }}
+            viewport={{ once: true, amount: 0.3 }}
           >
-            <CardContent className="p-4 text-white font-extralight text-sm gap-1 flex flex-col">
+            <MotionCardContent
+              className="p-4 text-white font-extralight text-sm gap-1 flex flex-col"
+              whileTap={{ scale: 1.02 }}
+              transition={{ duration: 0.1 }}
+            >
               <div className="flex  justify-between items-center ">
                 <div className="flex items-center gap-2">
                   <img
@@ -59,13 +119,24 @@ const Experience = (props: Props) => {
                     alt="logo"
                   />
                   <div className="flex flex-col justify-center">
-                    <h1 className="text-xl font-semibold font-[Inter]">{items.title}</h1>
+                    <h1 className="text-xl font-semibold font-[Inter]">
+                      {items.title}
+                    </h1>
                     <p className="text-md font-[Sansation]">
                       {items.from} - {items.to}
                     </p>
                   </div>
                 </div>
-                <ArrowRight className="flex items-center text-gray-500 cursor-pointer mr-2" />
+                <div className="group">
+                  <ArrowRight
+                    size={30}
+                    className="flex group-hover:hidden group-active:hidden items-center text-gray-500 cursor-pointer mr-2 hover:text-blue-500"
+                  />
+                  <ArrowUpRight
+                    size={30}
+                    className=" hidden group-hover:flex group-active:flex items-center text-gray-500 cursor-pointer mr-2 hover:text-blue-500"
+                  />
+                </div>
               </div>
 
               <div className="flex flex-col gap-2 py-1">
@@ -86,8 +157,8 @@ const Experience = (props: Props) => {
                   <p className="p-1 font-[Nokora]">{items.description}</p>
                 </div>
               </div>
-            </CardContent>
-          </Card>
+            </MotionCardContent>
+          </MotionCard>
         ))}
       </div>
     </div>
