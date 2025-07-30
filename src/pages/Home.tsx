@@ -6,11 +6,9 @@ import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
 import Stack from "@/components/Stack";
 import { Toaster } from "@/components/ui/sonner";
-import React from "react";
 
-type Props = {};
 
-const Home = (props: Props) => {
+const Home = () => {
   return (
     <div className="bg-black w-screen h-screen ">
       <Toaster richColors position="bottom-center"/>

@@ -1,5 +1,4 @@
-import { ArrowRight, ArrowUpRight, BriefcaseBusiness } from "lucide-react";
-import React from "react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 import { Separator } from "./ui/separator";
 import { motion } from "motion/react";
@@ -7,7 +6,7 @@ import alhind from '@/assets/experinence/alhind.png'
 import mulearn from '@/assets/experinence/mulearn.png'
 import freelance from '@/assets/experinence/freelance.png'
 
-type Props = {};
+
 
 const experience = [
   {
@@ -40,7 +39,7 @@ const experience = [
 ];
 const MotionCard = motion(Card);
 const MotionCardContent = motion(CardContent);
-const Experience = (props: Props) => {
+const Experience = () => {
   return (
     <div
       className="py-10 bg-black md:w-2/3 md:mx-auto md:px-24 md:py-12 md:pt-24"

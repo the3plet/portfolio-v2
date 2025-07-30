@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import logo from "@/assets/logo.png";
-import { Dot, Mail, PersonStanding, ToolCase } from "lucide-react";
-import { Button } from "./ui/button";
+import { Dot, Mail} from "lucide-react";
 import { motion } from "motion/react";
 
-type Props = {};
 const NavbarTab = {
   Hero: "hero",
   Experience: "experience",
@@ -14,7 +12,7 @@ const NavbarTab = {
 } as const;
 
 type NavbarTab = (typeof NavbarTab)[keyof typeof NavbarTab];
-const Navbar = (props: Props) => {
+const Navbar = () => {
   const [tab, setTab] = useState<NavbarTab>("hero");
   console.log(tab);
   const scrollToId = (id: string) => {
@@ -46,7 +44,7 @@ const Navbar = (props: Props) => {
             tab === NavbarTab.Hero ? " border-2 border-muted/80" : ""
           }`}
         >
-          <img src={logo} className="rounded-full" />
+          <img src={logo} className="rounded-full" alt="logo" />
         </button>
 
         <button

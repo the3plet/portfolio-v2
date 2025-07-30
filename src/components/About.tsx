@@ -5,7 +5,7 @@ import {
   LineSquiggle,
   Linkedin,
   Twitter,
-  Vault,
+  
 } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 import dp from "@/assets/dp.jpg";
@@ -24,13 +24,13 @@ import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { motion } from "motion/react";
 
-type Props = {};
+
 const photos = [photo, photo2, photo3, photo4, photo5];
 const mdphotos = [mdphoto, mdphoto2, mdphoto3, mdphoto4, mdphoto5];
 
 const MotionCarousel = motion(Carousel);
 const MotionCard = motion(Card);
-const About = (props: Props) => {
+const About = () => {
   return (
     <div className="bg-black  pt-14 pb-10 md:w-3/4 md:mx-auto md:px-0 md:py-12" id="about">
       <div className="flex flex-col items-left px-6 text-white gap-0 pb-4 border-b border-muted/20 border-dashed  md:mx-40">

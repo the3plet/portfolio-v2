@@ -1,9 +1,8 @@
-import { ArrowRight, Layers } from "lucide-react";
-import React from "react";
+import { ArrowRight } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 import {motion} from 'motion/react'
 
-type Props = {};
+
 
 const tools = [
     
@@ -60,9 +59,8 @@ const tools = [
 ];
 
 const MotionCard = motion(Card)
-const MotionCardContent= motion(CardContent)
 
-const Stack = (props: Props) => {
+const Stack = () => {
   return (
     <div className="py-10 bg-black md:w-2/3 md:mx-auto md:px-24 md:py-12" id="stack">
       <div className="flex flex-col items-left text-white  px-6 border-b border-muted/20 border-dashed pb-4 gap-1">

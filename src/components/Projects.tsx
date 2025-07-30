@@ -10,7 +10,6 @@ import product2 from '@/assets/projects/product2.png'
 import theruvutaste from '@/assets/projects/theruvutaste.png'
 import daniasecrets from '@/assets/projects/daniasecrets.png'
 
-type Props = {};
 const projects = [
   {
     title: "Theruvu Taste",
@@ -65,7 +64,7 @@ const projects = [
 const MotionCard = motion(Card);
 const MotionCardContent = motion(CardContent);
 const MotionButton = motion(Button);
-const Projects = (props: Props) => {
+const Projects = () => {
   return (
     <div
       className="py-10 bg-black md:w-2/3 md:mx-auto md:px-24 md:py-12"

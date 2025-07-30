@@ -1,10 +1,9 @@
-import { ArrowUpRight, ChevronDown } from "lucide-react";
-import React from "react";
-import { AnimatePresence, motion } from "motion/react";
+import {  ChevronDown } from "lucide-react";
+import { motion } from "motion/react";
 
-type Props = {};
 
-const Hero = (props: Props) => {
+
+const Hero = () => {
   return (
     <div className="flex flex-col px-4 gap-20 justify-center  h-full bg-[url('./assets/bg-img.png')] bg-cover bg-center md:pt-20" id="hero">
       <div className="flex flex-col items-center text-gray-400 text-3xl md:text-6xl font-semibold font-[Mulish]">
