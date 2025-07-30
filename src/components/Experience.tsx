@@ -37,10 +37,10 @@ const experience = [
 
 const Experience = (props: Props) => {
   return (
-    <div className="py-10 bg-black md:w-2/3 md:mx-auto md:border-x-[0.7px]  md:px-8">
-      <div className="flex flex-col items-left text-white border-b border-muted/20 border-dashed pb-4 px-6 gap-1">
-        <p className="text-4xl font-bold">Experience</p>
-        <p className="text-sm text-left text-gray-400 font-normal">
+    <div className="py-10 bg-black md:w-2/3 md:mx-auto md:px-24 md:py-12 md:pt-24">
+      <div className="flex flex-col items-left text-white border-b border-muted/20 border-dashed pb-4 px-6 gap-0 md:gap-2">
+        <p className="text-4xl font-bold font-[Sansation]">Experience</p>
+        <p className="text-sm md:text-xl text-left text-gray-400 font-normal font-[Sansation]">
           From freelance to full time role, every stop made me a better learner.
         </p>
       </div>
@@ -59,8 +59,8 @@ const Experience = (props: Props) => {
                     alt="logo"
                   />
                   <div className="flex flex-col justify-center">
-                    <h1 className="text-xl font-semibold">{items.title}</h1>
-                    <p className="text-md">
+                    <h1 className="text-xl font-semibold font-[Inter]">{items.title}</h1>
+                    <p className="text-md font-[Sansation]">
                       {items.from} - {items.to}
                     </p>
                   </div>
@@ -73,7 +73,7 @@ const Experience = (props: Props) => {
                   orientation="horizontal"
                   className="!h-[0.5px]  bg-muted/10"
                 />
-                <h1 className="text-lg font-bold">{items.role}</h1>
+                <h1 className="text-lg font-semibold ">{items.role}</h1>
                 <Separator
                   orientation="horizontal"
                   className="!h-[0.5px]  bg-muted/10"
@@ -83,7 +83,7 @@ const Experience = (props: Props) => {
                     <li>jsjjsjsj</li>
                     <li>jsjjsjsj</li>
                   </ul> */}
-                  <p className="p-1 ">{items.description}</p>
+                  <p className="p-1 font-[Nokora]">{items.description}</p>
                 </div>
               </div>
             </CardContent>

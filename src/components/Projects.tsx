@@ -57,10 +57,10 @@ const projects = [
 
 const Projects = (props: Props) => {
   return (
-    <div className="py-10 bg-black ">
-      <div className="flex flex-col items-left text-white  px-6 border-b border-muted/20 border-dashed pb-4 gap-1">
-        <p className="text-4xl font-bold">Build, Ship, Repeat</p>
-        <p className="text-sm text-left text-gray-400 font-normal">
+    <div className="py-10 bg-black md:w-2/3 md:mx-auto md:px-24 md:py-12">
+      <div className="flex flex-col items-left text-white  px-6 border-b border-muted/20 border-dashed pb-4 gap-0 md:gap-2">
+        <p className="text-4xl  font-bold font-[Sansation]">Build, Ship, Repeat</p>
+        <p className="text-sm md:text-xl text-left text-gray-400 font-normal font-[Sansation]">
           Projects I’ve built - from late-night ideas to deployment, each one
           was a learning curve.
         </p>
@@ -71,49 +71,58 @@ const Projects = (props: Props) => {
             className="bg-[#121212] border-muted/25 border-[0.1px] rounded-3xl py-4"
             key={index}
           >
-            <CardContent className="px-4">
-              <img
-                className="rounded-2xl w-[324px] h-[216px]"
-                src={item.image}
-              />
-              <div className="flex justify-between py-4 items-center">
-                <h1 className="text-white flex items-center font-extrabold text-xl ">
-                  {item.title}
-                </h1>
-                <Button
-                  variant={"link"}
-                  className="bg-slate-600/30 text-muted/50 font-bold"
-                >
-                  <Link2 />
-                  {item.title.length > 20 || item.link.length > 18 ? "Link" : item.link}
-                  
-                </Button>
+            <CardContent className="px-4 md:grid md:grid-cols-2 md:gap-4">
+              <div >
+                <img
+                  className="rounded-2xl w-[324px] h-[216px] md:w-full"
+                  src={item.image}
+                  alt="project"
+                />
               </div>
-              <Separator
-                orientation="horizontal"
-                className="!h-[0.5px]  bg-muted/10"
-              />
-              <div className="flex font-bold text-sm items-center text-gray-200/50 gap-2 py-2">
-                {item.tags.map((tag, tagIndex) => (
-                  <>
-                    <p>{tag}</p>
-                    {tagIndex !== item.tags.length - 1 && <Dot />}{" "}
-                  </>
-                ))}
-              </div>
-              <Separator
-                orientation="horizontal"
-                className="!h-[0.5px]  bg-muted/10"
-              />
-              <div>
-                <p className="text-gray-200/50 text-sm font-medium pt-4">
-                  {item.description}
-                </p>
+              <div className="md:flex md:flex-col md:justify-center">
+                <div className="flex justify-between py-4 items-center md:items-start">
+                  <h1 className="text-white/90 flex items-center font-extrabold font-[Rajdhani] text-xl h-full md:text-2xl">
+                    {item.title}
+                  </h1>
+                  <Button
+                    variant={"link"}
+                    className="bg-slate-600/30 text-muted/50 font-bold font-[Oxanium] flex items-center gap-1 my-auto cursor-pointer"
+                  >
+                    <Link2 className="flex items-center"/>
+                    <p className="flex items-center">
+
+                    {item.title.length > 20 || item.link.length > 18
+                      ? "Link"
+                      : item.link}
+                      </p>
+                  </Button>
+                </div>
+                <Separator
+                  orientation="horizontal"
+                  className="!h-[0.5px]  bg-muted/10 "
+                />
+                <div className="flex font-bold text-sm items-center text-gray-200/50 gap-2 py-2">
+                  {item.tags.map((tag, tagIndex) => (
+                    <>
+                      <p className="font-[Quicksand]">{tag}</p>
+                      {tagIndex !== item.tags.length - 1 && <Dot />}{" "}
+                    </>
+                  ))}
+                </div>
+                <Separator
+                  orientation="horizontal"
+                  className="!h-[0.5px]  bg-muted/10 "
+                />
+                <div>
+                  <p className="text-gray-200/50 text-sm font-normal font-[Nokora] pt-4">
+                    {item.description}
+                  </p>
+                </div>
               </div>
             </CardContent>
           </Card>
         ))}
-        <Button className="text-muted/60 text-md py-5">
+        <Button className="text-muted/60 text-md py-5 md:text-lg md:py-6 font-[Oxanium]">
           More on Github.com <Github />
         </Button>
       </div>
