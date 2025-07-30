@@ -119,7 +119,7 @@ const About = () => {
                     <CarouselItem key={index}>
                       <img
                         src={item}
-                        className="rounded-xl h-52 object-cover"
+                        className="rounded-xl h-52 mx-auto  object-cover flex justify-center"
                         alt="abt"
                       />
                     </CarouselItem>
