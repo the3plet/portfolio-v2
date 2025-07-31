@@ -764,9 +764,8 @@ const About = () => {
                   }}
                   viewport={{ once: true, amount: 0.6 }}
                 >
-                  It all started as a kid who begged for a computer just to
-                  grind games nonstop — I'm talking 12-hour sessions on
-                  weekends, no shame. But curiosity kicked in when the game
+                  It all started as a kid who wished for a computer just to
+                  grind games nonstop — But curiosity kicked in when the game
                   would crash or lag. Instead of just restarting it, I started
                   digging — tweaking settings, installing mods, even messing
                   around in system files just to see what made things tick. That
