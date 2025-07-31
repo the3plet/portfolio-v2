@@ -702,11 +702,11 @@ const About = () => {
             </div>
 
             {/* Content Section */}
-            <div className="md:w-2/3 p-6 space-y-6 text-zinc-100">
+            <div className="md:w-2/3 p-6 space-y-6 md:py-0 text-zinc-100 md:flex md:flex-col md:justify-center md:gap-4">
               {/* Part 1 */}
-              <div>
+              <div className="md:flex md:flex-col md:gap-2">
                 <motion.h2
-                  className="text-xl font-semibold text-neutral-300/90"
+                  className="text-2xl font-semibold text-neutral-300/90 "
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{
@@ -746,9 +746,9 @@ const About = () => {
               </div>
 
               {/* Part 2 */}
-              <div>
+              <div className="md:flex md:flex-col md:gap-2">
                 <motion.h2
-                  className="text-xl font-semibold text-neutral-300/90"
+                  className="text-2xl font-semibold text-neutral-300/90"
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{
@@ -788,9 +788,9 @@ const About = () => {
               </div>
 
               {/* Part 3 */}
-              <div>
+              <div className="md:flex md:flex-col md:gap-2">
                 <motion.h2
-                  className="text-xl font-semibold text-neutral-300/90"
+                  className="text-2xl font-semibold text-neutral-300/90"
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{
