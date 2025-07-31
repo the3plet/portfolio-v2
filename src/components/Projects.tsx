@@ -67,7 +67,7 @@ const MotionButton = motion(Button);
 const Projects = () => {
   return (
     <div
-      className="py-10 bg-black md:w-2/3 md:mx-auto md:px-24 md:py-12"
+      className="py-10 bg-[#050505] md:w-2/3 md:mx-auto md:px-24 md:py-12"
       id="project"
     >
       <div className="flex flex-col items-left text-white  px-6 border-b border-muted/20 border-dashed pb-4 gap-0 md:gap-2">
@@ -91,7 +91,7 @@ const Projects = () => {
           Build, Ship, Repeat
         </motion.p>
         <motion.p
-          className="text-sm md:text-xl text-left text-gray-400 font-normal font-[Sansation]"
+          className="text-sm md:text-xl text-left text-[#999999] font-normal font-[Sansation]"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{
             opacity: 1,
@@ -114,7 +114,7 @@ const Projects = () => {
       <div className="pt-6 px-4 flex flex-col gap-4 ">
         {projects.map((item, index) => (
           <MotionCard
-            className="bg-[#121212] border-muted/25 border-[0.1px] rounded-3xl py-4 cursor-pointer hover:outline-2 hover:border-white/60 hover:rounded-xl"
+            className="bg-[#0A0A0B] ring-neutral-800 ring-[0.5px] border-none rounded-3xl py-4 cursor-pointer hover:outline-2 hover:border-white/60 hover:rounded-xl"
             key={index}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{
@@ -140,8 +140,8 @@ const Projects = () => {
                   alt="project"
                 />
               </div>
-              <div className="md:flex md:flex-col md:justify-center">
-                <div className="flex justify-between py-4 items-end ">
+              <div className="md:flex md:flex-col md:gap-2 md:h-full">
+                <div className="flex justify-between py-4 md:pb-2 md:pt-0 items-end ">
                   <h1 className="text-white/80 flex items-end flex-1 font-extrabold font-[Rajdhani] text-xl h-full md:text-2xl">
                     {item.title}
                   </h1>
@@ -168,10 +168,10 @@ const Projects = () => {
                       window.open(item.url, "_blank");
                     }}
                     variant={"link"}
-                    className="bg-slate-600/30 text-muted/50 font-bold font-[Oxanium] flex items-center gap-1 my-auto cursor-pointer"
+                    className="bg-[#121212] text-muted/50 font-bold font-[Oxanium] flex items-center gap-1 my-auto cursor-pointer"
                   >
                     <Github className="flex items-center" />
-                    <p className="flex items-center">
+                    <p className="flex items-center text-[#CCCCCC]">
                       {item.title.length > 20 || item.link.length > 18
                         ? "Link"
                         : item.link}
@@ -182,7 +182,7 @@ const Projects = () => {
                   orientation="horizontal"
                   className="!h-[0.5px]  bg-muted/10 "
                 />
-                <div className="flex font-bold text-sm items-center text-gray-200/50 gap-2 py-2">
+                <div className="flex font-bold text-sm items-center text-[#999999] gap-2 py-2">
                   {item.tags.map((tag, tagIndex) => (
                     <React.Fragment key={tagIndex}>
                       <p className="font-[Quicksand]">{tag}</p>
@@ -195,7 +195,7 @@ const Projects = () => {
                   className="!h-[0.5px]  bg-muted/10 "
                 />
                 <div>
-                  <p className="text-gray-200/50 text-sm font-normal font-[Nokora] pt-4">
+                  <p className="text-[#999999] text-sm font-normal font-[Nokora] pt-4">
                     {item.description}
                   </p>
                 </div>

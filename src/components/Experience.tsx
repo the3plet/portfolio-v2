@@ -1,4 +1,4 @@
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Cpu, LaptopMinimal, LaptopMinimalCheck, ServerCog } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 import { Separator } from "./ui/separator";
 import { motion } from "motion/react";
@@ -66,7 +66,7 @@ const Experience = () => {
           Experience
         </motion.p>
         <motion.p
-          className="text-sm md:text-xl text-left text-gray-400 font-normal font-[Sansation]"
+          className="text-sm md:text-xl text-left text-[#999999] font-normal font-[Sansation]"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{
             opacity: 1,
@@ -89,7 +89,7 @@ const Experience = () => {
         {experience.map((items, index) => (
           <MotionCard
             key={index}
-            className="bg-[#121212] border-muted/25 border-[0.1px] rounded-xl py-0 backdrop-blur-3xl opacity-80 cursor-pointer hover:outline-2 hover:border-white/60 hover:rounded-xl"
+            className="bg-[#0A0A0B] ring-neutral-800 ring-[0.5px] border-none rounded-xl py-0   cursor-pointer hover:outline-2 hover:border-white/60 hover:rounded-xl"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{
               opacity: 1,
@@ -111,7 +111,7 @@ const Experience = () => {
               transition={{ duration: 0.1 }}
             >
               <div className="flex  justify-between items-center ">
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 text-[#D9D9D9]">
                   <img
                     className="flex w-12 h-12 rounded-sm items-center"
                     src={items.icon}
@@ -126,29 +126,32 @@ const Experience = () => {
                     </p>
                   </div>
                 </div>
-                <div className="group">
-                  <ArrowRight
+                <div className="hidden md:flex gap-4">
+
+                  <div className=" md:flex hidden text-xl font-bold font-[Sansation]">{items.role}</div>
+                <div className="group ">
+                  <Cpu
                     size={30}
-                    className="flex group-hover:hidden group-active:hidden items-center text-gray-500 cursor-pointer mr-2 hover:text-blue-500"
-                  />
-                  <ArrowUpRight
+                    className="flex group-hover:hidden group-active:hidden items-center text-gray-500 cursor-pointer mr-2 hover:text-neutral-500"
+                    />
+                  <ServerCog
                     size={30}
-                    className=" hidden group-hover:flex group-active:flex items-center text-gray-500 cursor-pointer mr-2 hover:text-blue-500"
-                  />
+                    className=" hidden group-hover:flex group-active:flex items-center text-gray-500 cursor-pointer mr-2 hover:text-neutral-500"
+                    />
                 </div>
+                    </div>
               </div>
 
               <div className="flex flex-col gap-2 py-1">
                 <Separator
-                  orientation="horizontal"
-                  className="!h-[0.5px]  bg-muted/10"
+                  orientation="horizontal"                  className="!h-[0.5px]  bg-muted/10 md:hidden"
                 />
-                <h1 className="text-lg font-semibold ">{items.role}</h1>
+                <h1 className="text-lg font-semibold text-[#D9D9D9] md:hidden">{items.role}</h1>
                 <Separator
                   orientation="horizontal"
-                  className="!h-[0.5px]  bg-muted/10"
+                  className="!h-[0.5px]  bg-muted/10 md:hidden"
                 />
-                <div className="bg-black p-2 rounded-md mt-2 border-muted/25 border-[0.1px]">
+                <div className="bg-[#050505] p-2 rounded-md mt-2 ring-neutral-600 ring-[0.5px]">
                   {/* <ul className="list-inside list-disc">
                     <li>jsjjsjsj</li>
                     <li>jsjjsjsj</li>

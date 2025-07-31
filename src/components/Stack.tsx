@@ -80,7 +80,7 @@ const Stack = () => {
           }}
           viewport={{ once: true, amount: 0.8 }}
         >Behind the Build</motion.p>
-        <motion.p className="text-sm md:text-xl text-left text-gray-400 font-normal font-[Sansation]"
+        <motion.p className="text-sm md:text-xl text-left text-[#999999] font-normal font-[Sansation]"
         initial={{ opacity: 0, y: 40 }}
           whileInView={{
             opacity: 1,
@@ -102,7 +102,7 @@ const Stack = () => {
       </div>
       <div className="pt-6 px-4 flex flex-col gap-2 md:grid md:grid-cols-2 md:gap-3">
         {tools.map((items, index) => (
-          <MotionCard key={index} className="bg-[#121212] border-muted/25 border-[0.1px] rounded-lg py-0 cursor-pointer hover:outline-2 hover:border-white/60 hover:rounded-xl"
+          <MotionCard key={index} className="bg-[#0A0A0B] ring-neutral-800 ring-[0.5px] border-none rounded-lg py-0 cursor-pointer hover:outline-2 hover:border-white/60 hover:rounded-xl"
           initial={{ opacity: 0, y: 40 }}
             whileInView={{
               opacity: 1,
