@@ -2,7 +2,7 @@ import React from "react";
 import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
 import { Separator } from "./ui/separator";
-import {  Dot, Github, Tally1 } from "lucide-react";
+import {   Github, Tally1 } from "lucide-react";
 import { motion } from "motion/react";
 import { toast } from "sonner";
 import product from '@/assets/projects/product1.png'
