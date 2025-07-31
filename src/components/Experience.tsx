@@ -147,16 +147,13 @@ const Experience = () => {
                   orientation="horizontal"                  className="!h-[0.5px]  bg-muted/10 md:hidden"
                 />
                 <h1 className="text-lg font-semibold text-[#D9D9D9] md:hidden">{items.role}</h1>
-                <Separator
-                  orientation="horizontal"
-                  className="!h-[0.5px]  bg-muted/10 md:hidden"
-                />
-                <div className="bg-[#050505] p-2 rounded-md mt-2 ring-neutral-600 ring-[0.5px]">
+                
+                <div className="bg-[#050505] p-2 rounded-md mt-0 lg:mt-2 ring-neutral-600 ring-[0.5px]">
                   {/* <ul className="list-inside list-disc">
                     <li>jsjjsjsj</li>
                     <li>jsjjsjsj</li>
                   </ul> */}
-                  <p className="p-1 font-[Nokora]">{items.description}</p>
+                  <p className="p-1 font-[Nokora] ">{items.description}</p>
                 </div>
               </div>
             </MotionCardContent>

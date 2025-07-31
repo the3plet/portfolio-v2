@@ -2,7 +2,7 @@ import React from "react";
 import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
 import { Separator } from "./ui/separator";
-import {  Dot, Github } from "lucide-react";
+import {  Dot, Github, Tally1 } from "lucide-react";
 import { motion } from "motion/react";
 import { toast } from "sonner";
 import product from '@/assets/projects/product1.png'
@@ -135,7 +135,7 @@ const Projects = () => {
             <MotionCardContent className="px-4 md:flex md:flex-col md:gap-2 md:items-center">
               <div>
                 <img
-                  className="rounded-2xl w-[324px] h-[216px] object-cover md:w-[380px] md:h-[200px]"
+                  className="rounded-2xl w-full h-[216px] object-cover md:w-[380px] md:h-[200px]"
                   src={item.image}
                   alt="project"
                 />
@@ -182,11 +182,11 @@ const Projects = () => {
                   orientation="horizontal"
                   className="!h-[0.5px]  bg-muted/10 "
                 />
-                <div className="flex font-bold text-sm md:justify-evenly items-center text-[#999999] gap-2 py-2">
+                <div className="flex font-bold text-sm md:justify-evenly items-center justify-around text-[#999999] gap-2 py-2">
                   {item.tags.map((tag, tagIndex) => (
                     <React.Fragment key={tagIndex}>
                       <p className="font-[Quicksand]">{tag}</p>
-                      {tagIndex !== item.tags.length - 1 && <Dot />}
+                      {tagIndex !== item.tags.length - 1 && <Tally1 className="text-muted/10" />}
                     </React.Fragment>
                   ))}
                 </div>
@@ -195,7 +195,7 @@ const Projects = () => {
                   className="!h-[0.5px]  bg-muted/10 "
                 />
                 <div>
-                  <p className="text-[#999999] text-sm font-normal font-[Nokora] pt-4">
+                  <p className="text-[#999999] text-sm font-normal font-[Nokora] pt-4 text-center">
                     {item.description}
                   </p>
                 </div>

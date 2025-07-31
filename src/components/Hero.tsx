@@ -68,7 +68,7 @@ const Hero = () => {
         }}
         viewport={{ once: true, amount: 0.5 }}
       >
-        <p className="hover:underline hover:decoration-blue-500 md:text-xl font-[QuickSand] font-medium">
+        <p className="hover:underline hover:decoration-blue-500 md:text-xl font-[QuickSand] font-medium text-muted/80">
           Scroll to explore more info
         </p>
         <ChevronDown className="animate-bounce text-blue-500" />
