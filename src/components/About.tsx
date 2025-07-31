@@ -1,5 +1,6 @@
 import {
   ArrowUpRight,
+  CodeXml,
   Github,
   Instagram,
   LineSquiggle,
@@ -146,7 +147,7 @@ const About = () => {
             whileTap={{ scale: 1.04 }}
             viewport={{ once: true, amount: 0.4 }}
           >
-            <CardContent className="p-4 text-white">
+            <CardContent className="p-4 text-white md:text-center">
               <p className="text-4xl text-neutral-500 font-[Space_Grotesk]">
                 {" "}
                 B.TECH
@@ -289,7 +290,7 @@ const About = () => {
             whileTap={{ scale: 1.04 }}
             viewport={{ once: true, amount: 0.3 }}
           >
-            <CardContent className="p-4 text-white font-[Space_Grotesk]">
+            <CardContent className="p-4 text-white font-[Space_Grotesk] md:text-center">
               <p className="text-4xl text-neutral-500"> Junior</p>
               <p className="text-3xl text-white"> Frontend Developer</p>
             </CardContent>
@@ -608,6 +609,34 @@ const About = () => {
             </MotionCard>
           </div>
         </motion.div>
+        <motion.p
+          className="text-center text-white/95 font-normal font-[Sansation] pt-20"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 1,
+            ease: "circInOut",
+            repeat: 0,
+            delay: 0.6,
+            type: "tween",
+            stiffness: 60,
+          }}
+          viewport={{ once: true, amount: 0.6 }}
+        >
+          <motion.p
+            initial={{ textDecorationColor:'#000000',textDecorationThickness:'0px', }}
+            whileInView={{ textDecorationColor:'#FFFFFF',textDecorationThickness:'2px',transition:{duration:0.3,delay:1.5}}}
+            
+            viewport={{ once: false, amount: 0.8 }}
+            className="flex flex-col md:flex-row text-xl md:text-2xl lg:text-2xl lg:pb-4 justify-center items-center gap-2 underline decoration-black underline-offset-2"
+          >
+            How It Started, How It’s Going — My Dev Journey{" "}
+            <CodeXml size={30} className="hidden md:flex md:items-end" />
+          </motion.p>
+        </motion.p>
         <motion.div
           className="max-w-7xl mx-auto bg-black md:bg-black shadow-xl rounded-2xl overflow-hidden border border-zinc-700"
           initial={{ opacity: 0 }}
@@ -625,7 +654,7 @@ const About = () => {
           }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <div className=" md:flex md:flex-col lg:flex lg:flex-row md:items-center lg:pl-6"> 
+          <div className=" md:flex md:flex-col lg:flex lg:flex-row md:items-center lg:pl-6">
             {/* Image Section */}
             <div className="md:w-auto lg:w-1/3  bg-black md:bg-black flex items-center justify-center p-4 md:p-0 md:py-6 ">
               <MotionCarousel
