@@ -11,8 +11,7 @@ import { Toaster } from "@/components/ui/sonner";
 const Home = () => {
   return (
     <div className="bg-black w-screen h-screen ">
-      {/* <Overlay/> */}
-      {/* <OverlayRight/> */}
+     
       <Toaster richColors position="bottom-center"/>
       <Navbar />
       <Hero />

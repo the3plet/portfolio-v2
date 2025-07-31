@@ -67,10 +67,10 @@ const MotionButton = motion(Button);
 const Projects = () => {
   return (
     <div
-      className="py-10 bg-[#050505] md:w-2/3 md:mx-auto md:px-24 md:py-12"
+      className="py-10 bg-[#050505] md:mx-auto  md:py-12"
       id="project"
     >
-      <div className="flex flex-col items-left text-white  px-6 border-b border-muted/20 border-dashed pb-4 gap-0 md:gap-2">
+      <div className="flex flex-col items-left text-white  px-6 border-b border-muted/20 border-dashed pb-4 gap-0 md:gap-2 md:mx-36">
         <motion.p
           className="text-4xl  font-bold font-[Sansation]"
           initial={{ opacity: 0, y: 40 }}
@@ -111,10 +111,10 @@ const Projects = () => {
           was a learning curve.
         </motion.p>
       </div>
-      <div className="pt-6 px-4 flex flex-col gap-4 ">
+      <div className="pt-6 px-4 flex flex-col gap-4 md:grid md:grid-cols-3 md:px-28 ">
         {projects.map((item, index) => (
           <MotionCard
-            className="bg-[#0A0A0B] ring-neutral-800 ring-[0.5px] border-none rounded-3xl py-4 cursor-pointer hover:outline-2 hover:border-white/60 hover:rounded-xl"
+            className="bg-[#0A0A0B] md:pb-2 md:mx-2 ring-neutral-800 ring-[0.5px] border-none rounded-3xl py-4 cursor-pointer hover:outline-2 hover:border-white/60 hover:rounded-xl"
             key={index}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{
@@ -132,15 +132,15 @@ const Projects = () => {
             viewport={{ once: true, amount: 0.2 }}
             whileTap={{ scale: 1.02, transition: { duration: 0.1, delay: 0 } }}
           >
-            <MotionCardContent className="px-4 md:grid md:grid-cols-2 md:gap-4 md:items-center">
+            <MotionCardContent className="px-4 md:flex md:flex-col md:gap-2 md:items-center">
               <div>
                 <img
-                  className="rounded-2xl w-[324px] h-[216px] md:w-full "
+                  className="rounded-2xl w-[324px] h-[216px] object-cover md:w-[380px] md:h-[200px]"
                   src={item.image}
                   alt="project"
                 />
               </div>
-              <div className="md:flex md:flex-col md:gap-2 md:h-full">
+              <div className="md:flex md:flex-col md:gap-0 md:h-full">
                 <div className="flex justify-between py-4 md:pb-2 md:pt-0 items-end ">
                   <h1 className="text-white/80 flex items-end flex-1 font-extrabold font-[Rajdhani] text-xl h-full md:text-2xl">
                     {item.title}
@@ -182,7 +182,7 @@ const Projects = () => {
                   orientation="horizontal"
                   className="!h-[0.5px]  bg-muted/10 "
                 />
-                <div className="flex font-bold text-sm items-center text-[#999999] gap-2 py-2">
+                <div className="flex font-bold text-sm md:justify-evenly items-center text-[#999999] gap-2 py-2">
                   {item.tags.map((tag, tagIndex) => (
                     <React.Fragment key={tagIndex}>
                       <p className="font-[Quicksand]">{tag}</p>
@@ -204,7 +204,7 @@ const Projects = () => {
           </MotionCard>
         ))}
         <MotionButton
-          className="text-muted/60 text-md py-5 md:text-lg md:py-6 font-[Oxanium] cursor-pointer hover:ring-2 border-white/60 rounded-xl" onClick={() => window.open('https://github.com/the3plet/', "_blank")}
+          className="text-muted/60 md:h-full md:ring-neutral-800 md:ring-[0.5px] md:border-none md:rounded-3xl text-md py-5 md:text-lg md:py-6 font-[Oxanium] cursor-pointer hover:ring-2 border-white/60 rounded-xl md:flex md:flex-col-reverse" onClick={() => window.open('https://github.com/the3plet/', "_blank")}
           initial={{ opacity: 0, y: 40 }}
           whileInView={{
             opacity: 1,
@@ -222,7 +222,7 @@ const Projects = () => {
           viewport={{ once: true, amount: 0.1 }}
           whileTap={{ scale: 1.3 }}
         >
-          More on Github.com <Github />
+         <p className="md:font-semibold md:text-xl"> More on Github.com</p> <Github  className="md:hidden"/> <Github className="hidden md:flex min-w-40 min-h-16 "/>
         </MotionButton>
       </div>
     </div>
