@@ -1,10 +1,8 @@
-import React from 'react'
 import { Separator } from './ui/separator'
 import { Github, Instagram, Linkedin } from 'lucide-react'
 
-type Props = {}
 
-const OverlayRight = (props: Props) => {
+const OverlayRight = () => {
   return (
     <div className="fixed w-screen h-screen my-auto">
           <Separator

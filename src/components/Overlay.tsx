@@ -1,10 +1,8 @@
 import { Github, Instagram, Linkedin } from "lucide-react";
-import React from "react";
 import { Separator } from "./ui/separator";
 
-type Props = {};
 
-const Overlay = (props: Props) => {
+const Overlay = () => {
   return (
     <div className="fixed w-screen h-screen">
     <div className="">

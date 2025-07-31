@@ -1,4 +1,4 @@
-import { ArrowRight, ArrowUpRight, Cpu, LaptopMinimal, LaptopMinimalCheck, ServerCog } from "lucide-react";
+import { Cpu, ServerCog } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 import { Separator } from "./ui/separator";
 import { motion } from "motion/react";
