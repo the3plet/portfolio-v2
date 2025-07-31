@@ -35,7 +35,7 @@ const About = () => {
       className="bg-black  pt-14 pb-10 md:w-6/7 md:mx-auto md:px-0 md:py-12"
       id="about"
     >
-      <div className="flex flex-col items-left px-6 text-white gap-0 pb-4 border-b border-muted/20 border-dashed  md:mx-10">
+      <div className="flex flex-col items-left px-6 text-white gap-0 pb-4 border-b border-muted/20 border-dashed  md:mx-10 lg:mx-14">
         <motion.p
           className="text-4xl font-bold font-[Sansation]"
           initial={{ opacity: 0, y: 40 }}
@@ -72,7 +72,7 @@ const About = () => {
           }}
           viewport={{ once: true, amount: 0.6 }}
         >
-          How It Started, How It’s Going — My Dev Path
+          Get to know about the 'me' behind the work, feel free to reach out or just say hi!, feel free to connect.
         </motion.p>
       </div>
       <div className="px-4 gap-3 flex flex-col pt-4">
