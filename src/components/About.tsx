@@ -75,7 +75,6 @@ const About = () => {
         </motion.p>
       </div>
       <div className="px-4 gap-3 flex flex-col pt-4">
-        
         <motion.div
           className="flex flex-col gap-2 border-[0.5px] p-2 rounded-xl border-dashed border-neutral-500 md:border-none"
           initial={{ borderColor: "#000000" }}
@@ -93,7 +92,7 @@ const About = () => {
           viewport={{ once: true, amount: 0.5 }}
         >
           <MotionCard
-            className="bg-[#1A1A1A] border-[#0F0F0F] rounded-3xl py-0 md:hidden"
+            className="bg-[#1A1A1A] border-[#0F0F0F] rounded-3xl py-0  lg:hidden"
             initial={{ opacity: 0, y: -40 }}
             whileInView={{
               opacity: 1,
@@ -114,20 +113,23 @@ const About = () => {
               <article className="flex gap-2">
                 <img
                   src={dp}
-                  className="rounded-full w-24 h-24 float-left"
+                  className="rounded-full w-24 h-24 float-left md:flex md:items-center"
                   alt="profile pic"
                 />
-                <p className="text-xl  font-light flex items-center font-[Space_Grotesk] text-neutral-200">
+                <p className="text-xl md:text-center font-light flex items-center font-[Space_Grotesk] text-neutral-200">
                   What started as curiosity became passion, and now it's
                 </p>
+                <h1 className="text-lg hidden lg:hidden text-neutral-500 text-left font-bold md:flex md:items-center justify-center py-2 underline decoration-red-500 font-[Space_Grotesk]">
+                  A full-time journey as a developer.
+                </h1>
               </article>
-              <h1 className="text-lg text-neutral-500 text-left font-bold flex justify-center py-2 underline decoration-blue-500 font-[Space_Grotesk]">
+              <h1 className="text-lg md:hidden text-neutral-500 text-left font-bold flex justify-center py-2 underline decoration-red-500 font-[Space_Grotesk]">
                 A full-time journey as a developer.
               </h1>
             </CardContent>
           </MotionCard>
           <MotionCard
-            className="bg-[#1A1A1A]  rounded-3xl py-0 border border-[#0F0F0F] md:hidden"
+            className="bg-[#1A1A1A]  rounded-3xl py-0 border border-[#0F0F0F] lg:hidden"
             initial={{ opacity: 0, y: -40 }}
             whileInView={{
               opacity: 1,
@@ -155,7 +157,7 @@ const About = () => {
               </p>
             </CardContent>
           </MotionCard>
-          <div className="flex gap-2 md:hidden ">
+          <div className="flex gap-2 lg:hidden ">
             <MotionCard
               className="bg-[#1A1A1A] border-[#0F0F0F] rounded-2xl py-0 flex-1"
               initial={{ opacity: 0, scale: 0.8 }}
@@ -270,7 +272,7 @@ const About = () => {
             </MotionCard>
           </div>
           <MotionCard
-            className="bg-[#1A1A1A] border-[#0F0F0F] rounded-3xl py-0 md:hidden"
+            className="bg-[#1A1A1A] border-[#0F0F0F] rounded-3xl py-0 lg:hidden"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{
               opacity: 1,
@@ -293,7 +295,7 @@ const About = () => {
             </CardContent>
           </MotionCard>
           <MotionCard
-            className="bg-[#1A1A1A] border-[#0F0F0F] rounded-3xl py-0 md:hidden"
+            className="bg-[#1A1A1A] border-[#0F0F0F] rounded-3xl py-0 lg:hidden"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{
               opacity: 1,
@@ -333,7 +335,7 @@ const About = () => {
           </MotionCard>
         </motion.div>
         <motion.div
-          className="hidden md:grid md:grid-cols-3 gap-2  border-0  rounded-xl outline-0 ring-0 border-neutral-500"
+          className="hidden md:hidden  lg:grid lg:grid-cols-3 gap-2  border-0  rounded-xl outline-0 ring-0 border-neutral-500"
           initial={{ borderColor: "#000000" }}
           whileInView={{
             borderColor: "#737373",
@@ -377,7 +379,7 @@ const About = () => {
                   Whàt stàrted às curiosity becàme pàssion, and now it's
                 </p>
 
-                <h1 className="text-lg text-neutral-500 font-semibold flex justify-start py-2 underline decoration-blue-500 font-[Space_Grotesk]">
+                <h1 className="text-lg text-neutral-500 font-semibold flex justify-start py-2 underline decoration-red-500 font-[Space_Grotesk]">
                   a full-time journey as a Developer.
                 </h1>
               </CardContent>
@@ -623,11 +625,11 @@ const About = () => {
           }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <div className="md:flex">
+          <div className=" md:flex md:flex-col lg:flex lg:flex-row md:items-center lg:pl-6"> 
             {/* Image Section */}
-            <div className="md:w-1/3 bg-black md:bg-black flex items-center justify-center p-4 md:p-0">
+            <div className="md:w-auto lg:w-1/3  bg-black md:bg-black flex items-center justify-center p-4 md:p-0 md:py-6 ">
               <MotionCarousel
-                className="md:hidden"
+                className="lg:hidden "
                 plugins={[
                   Autoplay({
                     delay: 2000,
@@ -651,7 +653,7 @@ const About = () => {
                     <CarouselItem key={index}>
                       <img
                         src={item}
-                        className="rounded-xl h-52 mx-auto  object-cover flex justify-center"
+                        className="rounded-xl h-52 mx-auto  object-cover flex justify-center md:w-xl"
                         alt="abt"
                       />
                     </CarouselItem>
@@ -659,7 +661,7 @@ const About = () => {
                 </CarouselContent>
               </MotionCarousel>
               <MotionCarousel
-                className="hidden md:flex"
+                className="hidden lg:flex"
                 plugins={[
                   Autoplay({
                     delay: 2000,
@@ -702,9 +704,9 @@ const About = () => {
             </div>
 
             {/* Content Section */}
-            <div className="md:w-2/3 p-6 space-y-6 md:py-0 text-zinc-100 md:flex md:flex-col md:justify-center md:gap-4">
+            <div className="lg:w-2/3 p-6 space-y-6 md:py-0 text-zinc-100 md:flex md:flex-col md:justify-center md:gap-4  md:pb-4 lg:items-center lg:px-6">
               {/* Part 1 */}
-              <div className="md:flex md:flex-col md:gap-2">
+              <div className="md:flex md:flex-col md:gap-2 lg:mb-0">
                 <motion.h2
                   className="text-2xl font-semibold text-neutral-300/90 "
                   initial={{ opacity: 0, y: 40 }}

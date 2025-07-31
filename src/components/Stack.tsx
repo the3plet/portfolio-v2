@@ -5,64 +5,74 @@ import {motion} from 'motion/react'
 
 
 const tools = [
-    
   {
     icon: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
     title: "React",
     description: "Frontend Framework",
+    link: "https://react.dev/",
   },
   {
     icon: "https://images-cdn.openxcell.com/wp-content/uploads/2024/07/25082439/reactnative-inner.svg",
     title: "React Native",
     description: "Native App Framework by React",
+    link: "https://reactnative.dev/",
   },
   {
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
     title: "Angular",
     description: "Framework for Building Web Apps",
+    link: "https://angular.io/",
   },
   {
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
     title: "Next.js",
     description: "React Framework for SSR & SSG",
+    link: "https://nextjs.org/",
   },
   {
     icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4T1YOdxe--UDu6VlEaqifJFs_dIXyiJUM0A&s",
     title: "Express",
     description: "Minimal and Flexible Backend Framework",
+    link: "https://expressjs.com/",
   },
   {
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
     title: "Figma",
     description: "Collaborative UI/UX Design Tool",
+    link: "https://figma.com/",
   },
   {
     icon: "https://www.svgrepo.com/show/354210/prisma.svg",
     title: "Prisma",
     description: "Type-Safe ORM for Node.js",
+    link: "https://www.prisma.io/",
   },
   {
-    icon: "https://neon.com/favicon/favicon.png", // official NeonDB GitHub avatar
+    icon: "https://neon.com/favicon/favicon.png",
     title: "NeonDB",
     description: "Serverless Postgres with Branching",
+    link: "https://neon.tech/",
   },
   {
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
     title: "Git",
     description: "Version Control System",
+    link: "https://git-scm.com/",
   },
   {
     icon: "https://cdn.worldvectorlogo.com/logos/typescript.svg",
     title: "TypeScript",
     description: "Typed JavaScript Superset",
+    link: "https://www.typescriptlang.org/",
   },
 ];
+
 
 const MotionCard = motion(Card)
 
 const Stack = () => {
   return (
-    <div className="py-10 bg-black md:w-2/3 md:mx-auto md:px-24 md:py-12" id="stack">
+    <div className="py-10 bg-black md:w-2/3 md:mx-auto md:px-10 lg:px-24 md:py-12 " id="stack">
       <div className="flex flex-col items-left text-white  px-6 border-b border-muted/20 border-dashed pb-4 gap-1">
         <motion.p className="text-4xl font-bold font-[Sansation]"
         initial={{ opacity: 0, y: 40 }}
@@ -119,19 +129,19 @@ const Stack = () => {
             viewport={{ once: true, amount: 0.4 }}
           >
             <CardContent className="p-4 text-white font-extralight text-sm gap-1 flex flex-col">
-              <div className="flex justify-between items-center">
-                <div className="flex items-center gap-2 ">
+              <div className="flex justify-between md:justify-center lg:justify-between items-center">
+                <div className="flex items-center gap-2 md:flex-col lg:flex-row">
                   <img
                     className="flex w-12 h-12 rounded-sm items-center "
                     src={items.icon}
                     alt="logo"
                   />
                   <div className="flex flex-col justify-center">
-                    <h1 className="text-lg font-bold font-[Sansation]">{items.title}</h1>
-                    <p className="text-md text-muted/60 font-medium font-[Sansation]">{items.description}</p>
+                    <h1 className="text-lg font-bold font-[Sansation] md:text-center lg:text-left">{items.title}</h1>
+                    <p className=" text-muted/60 font-medium font-[Sansation] md:text-xs lg:text-sm md:text-center lg:text-left">{items.description}</p>
                   </div>
                 </div>
-                <ArrowRight className="flex items-center text-gray-500" />
+                <ArrowRight className="flex items-center text-gray-500 md:hidden lg:flex hover:text-white" onClick={()=>window.open(items.link, "_blank")}/>
               </div>
             </CardContent>
           </MotionCard>

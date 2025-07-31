@@ -70,7 +70,7 @@ const Projects = () => {
       className="py-10 bg-[#050505] md:mx-auto  md:py-12"
       id="project"
     >
-      <div className="flex flex-col items-left text-white  px-6 border-b border-muted/20 border-dashed pb-4 gap-0 md:gap-2 md:mx-36">
+      <div className="flex flex-col items-left text-white  px-6 border-b border-muted/20 border-dashed pb-4 gap-0 md:gap-2 md:mx-10 lg:mx-36 ">
         <motion.p
           className="text-4xl  font-bold font-[Sansation]"
           initial={{ opacity: 0, y: 40 }}
@@ -111,10 +111,10 @@ const Projects = () => {
           was a learning curve.
         </motion.p>
       </div>
-      <div className="pt-6 px-4 flex flex-col gap-4 md:grid md:grid-cols-3 md:px-28 ">
+      <div className="pt-6 px-4 flex flex-col gap-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:px-10 lg:px-28">
         {projects.map((item, index) => (
           <MotionCard
-            className="bg-[#0A0A0B] md:pb-2 md:mx-2 ring-neutral-800 ring-[0.5px] border-none rounded-3xl py-4 cursor-pointer hover:outline-2 hover:border-white/60 hover:rounded-xl"
+            className="bg-[#0A0A0B] md:pb-2 md:mx-2 ring-neutral-800 ring-[0.5px] border-none rounded-3xl py-4 cursor-pointer hover:outline-2 hover:border-white/60 hover:rounded-xl  lg:mx-auto" // remove lg:mx-auto for best experience but will break in ipad pro
             key={index}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{
@@ -168,10 +168,10 @@ const Projects = () => {
                       window.open(item.url, "_blank");
                     }}
                     variant={"link"}
-                    className="bg-[#121212] text-muted/50 font-bold font-[Oxanium] flex items-center gap-1 my-auto cursor-pointer"
+                    className="bg-[#121212] text-muted/50 font-bold font-[Oxanium] flex items-center gap-1 md:gap-0 lg:gap-1 my-auto cursor-pointer md:flex-col lg:flex-row md:py-4 "
                   >
                     <Github className="flex items-center" />
-                    <p className="flex items-center text-[#CCCCCC]">
+                    <p className="flex items-center text-[#CCCCCC] md:text-xs lg:text-sm/8  ">
                       {item.title.length > 20 || item.link.length > 18
                         ? "Link"
                         : item.link}
@@ -222,7 +222,7 @@ const Projects = () => {
           viewport={{ once: true, amount: 0.1 }}
           whileTap={{ scale: 1.3 }}
         >
-         <p className="md:font-semibold md:text-xl"> More on Github.com</p> <Github  className="md:hidden"/> <Github className="hidden md:flex min-w-40 min-h-16 "/>
+         <p className="md:font-semibold md:text-xl hover:underline"> More on Github.com</p> <Github  className="md:hidden"/> <Github className="hidden md:flex min-w-40 min-h-16 "/>
         </MotionButton>
       </div>
     </div>

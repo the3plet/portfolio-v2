@@ -42,7 +42,7 @@ const MotionCardContent = motion(CardContent);
 const Experience = () => {
   return (
     <div
-      className="py-10 bg-black md:w-2/3 md:mx-auto md:px-24 md:py-12 md:pt-24"
+      className="py-10 bg-black md:w-2/3 md:mx-auto md:px-6 md:py-12 md:pt-24 lg:px-24"
       id="experience"
     >
       <div className="flex flex-col items-left text-white border-b border-muted/20 border-dashed pb-4 px-6 gap-0 md:gap-2">
@@ -128,7 +128,7 @@ const Experience = () => {
                 </div>
                 <div className="hidden md:flex gap-4">
 
-                  <div className=" md:flex hidden text-xl font-bold font-[Sansation]">{items.role}</div>
+                  <div className=" md:flex hidden text-xl font-bold font-[Sansation] md:text-right lg:text-left">{items.role}</div>
                 <div className="group ">
                   <Cpu
                     size={30}
