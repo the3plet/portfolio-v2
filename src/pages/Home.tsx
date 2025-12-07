@@ -6,9 +6,25 @@ import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
 import Stack from "@/components/Stack";
 import { Toaster } from "@/components/ui/sonner";
+import { preloadImages } from "@/lib/preloadImages";
+import { useEffect, useState } from "react";
+
+import bg from "/bg-img.png";
+import logo from "/logo.png";
+import Loader from "@/components/Loader";
+import { Globe } from "@/components/ui/globe";
 
 
 const Home = () => {
+    const [ready, setReady] = useState(false);
+
+     useEffect(() => {
+    preloadImages([bg, logo]).then(() => {
+      setReady(true);
+    });
+  }, []);
+
+  if (!ready) return <Loader />;
   return (
     <div className="bg-black w-screen h-screen ">
      

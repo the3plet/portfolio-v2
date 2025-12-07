@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "@/assets/logo.png";
+import logo from "/logo.png";
 import { Dot, Mail} from "lucide-react";
 import { motion } from "motion/react";
 

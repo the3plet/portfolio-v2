@@ -153,7 +153,7 @@ const Experience = () => {
                     <li>jsjjsjsj</li>
                     <li>jsjjsjsj</li>
                   </ul> */}
-                  <p className="p-1 font-[Nokora] ">{items.description}</p>
+                  <p className="p-1 font-[Nokora] text-[#999999]">{items.description}</p>
                 </div>
               </div>
             </MotionCardContent>
