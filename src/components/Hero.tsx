@@ -26,7 +26,7 @@ const Hero = () => {
         >
           a{" "}
           <span className="text-blue-500 text-3xl md:text-6xl font-extrabold font-[Crimson] italic">
-            Frontend Developer
+            Fullstack Developer
           </span>
         </motion.h1>
 
