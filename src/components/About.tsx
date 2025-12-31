@@ -549,11 +549,11 @@ const About = () => {
               viewport={{ once: true, amount: 0.9 }}
             >
               <CardContent className="p-4 text-white">
-                <p className="text-3xl text-gray-600 font-[Space_Grotesk]">
+                {/* <p className="text-3xl text-gray-600 font-[Space_Grotesk]">
                   Junior
-                </p>
+                </p> */}
                 <p className="text-3xl text-white  font-[Space_Grotesk]">
-                  Frontend Developer
+                  Fullstack Developer
                 </p>
               </CardContent>
             </MotionCard>
