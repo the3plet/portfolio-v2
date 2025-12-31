@@ -9,6 +9,9 @@ import product from '@/assets/projects/product1.png'
 import product2 from '@/assets/projects/product2.png'
 import theruvutaste from '@/assets/projects/theruvutaste.png'
 import daniasecrets from '@/assets/projects/daniasecrets.png'
+import eato from '@/assets/projects/eato.png'
+import client from '@/assets/projects/client-layout.png'
+import travelmythri from '@/assets/projects/travelmythri2.png'
 
 const projects = [
   {
@@ -20,6 +23,36 @@ const projects = [
       "Full-stack app for discovering street food gems. Built with React Native, with real-time updates (Socket.IO) and image uploads (Cloudinary).",
     image: theruvutaste,
     tags: ["React Native", "Expo", "Expressjs"],
+  },
+  {
+    title: "Client Project (NDA)",
+    type: "Frontend",
+    url: "https://client-project-layout.vercel.app/",
+    link: "Demo Layout",
+    description:
+      "Desktop-first UI layout for a confidential client project. The final website is currently under NDA(Non-Disclosure Agreement) and not yet publicly launched.",
+    image: client,
+    tags: ["Nextjs", "GSAP", "Tailwind"],
+  },
+  {
+    title: "Eato",
+    type: "Frontend",
+    url: "https://github.com/the3plet/eato",
+    link: "Eato",
+    description:
+      "Mobile-first experimental food-ordering web app built to explore advanced GSAP motion design and smooth micro-interactions focused on fluid UX animations..",
+    image: eato,
+    tags: ["Nextjs", "GSAP", "Tailwind"],
+  },
+  {
+    title: "TravelMythri",
+    type: "public",
+     url: "https://travelmythri.com",
+    link: "Live Link",
+    description:
+      "Full-featured flight booking platform supporting both domestic and international routes, with advanced search, fare filtering, seat selection, and a streamlined booking experience designed for reliability and ease of use.",
+    image: travelmythri,
+    tags: ["React", "Redux", "ShadCN UI"],
   },
   {
     title: "Hybrhind Forex",

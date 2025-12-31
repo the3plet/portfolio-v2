@@ -12,7 +12,6 @@ import { useEffect, useState } from "react";
 import bg from "/bg-img.png";
 import logo from "/logo.png";
 import Loader from "@/components/Loader";
-import { Globe } from "@/components/ui/globe";
 
 
 const Home = () => {

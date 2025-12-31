@@ -5,16 +5,25 @@ import { motion } from "motion/react";
 import alhind from '@/assets/experinence/alhind.png'
 import mulearn from '@/assets/experinence/mulearn.png'
 import freelance from '@/assets/experinence/freelance.png'
+import xandy from '@/assets/experinence/xandy.png'
 
 
 
 const experience = [
   {
+    icon: xandy, // tech company-style icon
+    title: "XandY Learning",
+    role: "Fullstack Developer",
+    from: "December 2025",
+    to: "Present",
+    description:
+  "Developing performance-focused landing pages for Xandy Learning programs with fast, responsive UI. Leading the ongoing build of the new Xandy Learning and EduPlatform websites with reusable components, scalability in mind, and planned integrations for analytics, user tracking, and payments.",  },
+  {
     icon: alhind, // tech company-style icon
     title: "Alhind Tours & Travels",
     role: "Junior Frontend Developer",
     from: "January 2024",
-    to: "Present",
+    to: "December 2025",
     description:
       "Built clean and responsive UIs for Hybrhind Forex ERP using React.js and ShadCN, powering daily use by 200+ traders. Hooked up 15+ APIs with smooth data handling. Also crafted a digital signage system and admin panel that replaced 50+ physical boards across 10 locations. Optimized components for performance and responsiveness, cutting page load times by 40%.",
   },
